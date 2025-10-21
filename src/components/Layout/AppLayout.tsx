@@ -7,7 +7,7 @@ export default function AppLayout() {
         <div>
             <ProtectedRoutes>
                 <Header />
-                <main>
+                <main className="h-[calc(100vh-65px)]">
                     <Outlet />
                 </main>
                 {/* <Footer /> */}
