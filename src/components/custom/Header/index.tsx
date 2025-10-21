@@ -40,7 +40,6 @@ export default function Header() {
             }
             <Avatar className="absolute top-0 left-1/2 -translate-x-1/2 size-[80px] bg-[#012B54] p-2">
                 <AvatarImage src="https://github.com/shadcn.png" className="rounded-full" />
-                <AvatarFallback>CN</AvatarFallback>
             </Avatar>
         </header>
     )
