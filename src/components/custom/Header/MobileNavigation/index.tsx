@@ -33,11 +33,20 @@ export function MobileNavigation({ nav }: { nav: NavItems[] }) {
                 <SheetFooter>
                     {loggedIn
                         ?
-                        <Button className="bg-[#012B54]" onClick={logout}>Logout</Button>
+                        <Button className="bg-[#012B54]"
+                            onClick={() => {
+                                setOpen(false)
+                                logout()
+                            }
+                            }
+                        >
+                            Logout
+                        </Button>
                         :
                         <Link
                             to={'/auth/login'}
                             className="bg-[#012B54] text-white p-1 text-center rounded"
+                            onClick={() => setOpen(false)}
                         >
                             Login
                         </Link>

@@ -1,27 +1,26 @@
+import { useMediaQuery } from "@/hooks/useMediaQuery"
 import type { NavItems } from "@/types/NavigationType"
 import { Link } from "react-router-dom"
 import { MobileNavigation } from "./MobileNavigation"
-import { useMediaQuery } from "@/hooks/useMediaQuery"
 import { Avatar, AvatarImage } from "@/components/ui/avatar"
 
-export default function Header() {
-
+export default function AuthHeader() {
     const isMobile = useMediaQuery("(max-width: 1024px)")
 
     const navigation: NavItems[] = [
         {
-            label: "Home",
-            url: "/"
+            label: "Login",
+            url: "login"
         },
         {
-            label: "Profile",
-            url: "/profile"
+            label: "Register",
+            url: "register"
         },
     ]
 
     const navItems = navigation.map((nav, index) => (
         <li key={`${nav.label}-${index}`}>
-            <Link to={nav.url}>
+            <Link to={`/auth/${nav.url}`}>
                 {nav.label}
             </Link>
         </li>
