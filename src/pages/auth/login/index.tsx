@@ -2,11 +2,15 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Field, FieldLabel } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useForm, type SubmitHandler } from "react-hook-form"
 import type { UserCreds } from "@/types/User";
+import { useAuthStore } from "@/store";
 
 export default function Login() {
+
+    const { login } = useAuthStore()
+    const navigate = useNavigate()
     const { register, handleSubmit, reset } = useForm<UserCreds>({
         defaultValues: {
             email: "",
@@ -15,8 +19,9 @@ export default function Login() {
     })
 
     const onSubmit: SubmitHandler<UserCreds> = (data) => {
-        console.log(data)
+        login(data)
         reset()
+        navigate('/')
     }
 
     return (
@@ -44,7 +49,6 @@ export default function Login() {
                     </CardContent>
                 </Card>
             </div>
-
         </div>
     )
 }

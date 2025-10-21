@@ -1,9 +1,8 @@
-import { Sheet } from "@/components/ui/sheet"
 import type { NavItems } from "@/types/NavigationType"
 import { Link } from "react-router-dom"
 import { MobileNavigation } from "./MobileNavigation"
 import { useMediaQuery } from "@/hooks/useMediaQuery"
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Avatar, AvatarImage } from "@/components/ui/avatar"
 
 export default function Header() {
 

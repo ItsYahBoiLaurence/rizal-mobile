@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTrigger } from "@/components/ui/sheet";
+import { useAuthStore } from "@/store";
 import type { NavItems } from "@/types/NavigationType";
 import { Menu } from "lucide-react";
 import { useState } from "react";
@@ -8,7 +9,7 @@ import { Link, useLocation } from "react-router-dom";
 export function MobileNavigation({ nav }: { nav: NavItems[] }) {
     const { pathname } = useLocation();
     const [open, setOpen] = useState<boolean>(false)
-    const [isLoggedIn, setIsLoggedIn] = useState<boolean>(true)
+    const { loggedIn, logout } = useAuthStore()
 
     return (
         <Sheet open={open} onOpenChange={setOpen}>
@@ -30,9 +31,9 @@ export function MobileNavigation({ nav }: { nav: NavItems[] }) {
                     ))}
                 </ul>
                 <SheetFooter>
-                    {isLoggedIn
+                    {loggedIn
                         ?
-                        <Button onClick={() => setIsLoggedIn(false)} className="bg-[#012B54]">Logout</Button>
+                        <Button className="bg-[#012B54]" onClick={logout}>Logout</Button>
                         :
                         <Link
                             to={'/auth/login'}
