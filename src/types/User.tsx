@@ -15,10 +15,10 @@ export interface UserInformation {
     firstName: string,
     middleName: string,
     lastName: string
-    suffix: string | null | undefined
+    suffix: string
     civilStatus: string
-    birthdate: Date | string
-    citizenShip: string
+    birthdate: string
+    citizenship: string
 
     region: string
     province: string

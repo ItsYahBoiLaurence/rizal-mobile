@@ -8,6 +8,7 @@ import Register from "./pages/auth/register"
 import Appointment from "./pages/appointment"
 import { Confirm } from "./pages/appointment/confirm"
 import EmailVerification from "./pages/auth/email-verification"
+import ProfilePreview from "./pages/profile/profile-preview"
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/" element={<AppLayout />} >
         <Route index element={<Home />} />
         <Route path='profile' element={<Profile />} />
+        <Route path='profile/preview' element={<ProfilePreview />} />
         <Route path="appointment" element={<Appointment />}></Route>
         <Route path="confirmation" element={<Confirm />} />
       </Route>

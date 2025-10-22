@@ -2,13 +2,19 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Field, FieldGroup, FieldLabel, FieldLegend, FieldSet } from "@/components/ui/field";
 import { Input } from "@/components/ui/input";
+import { useProfileStore } from "@/store";
 import type { UserInformation } from "@/types/User";
 import { useState } from "react";
 import { useForm, type SubmitHandler } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
 
 export default function Profile() {
 
     const [currentStage, setCurrentStage] = useState<number>(1)
+
+    const { setProfile } = useProfileStore()
+
+    const navigate = useNavigate()
 
     const { register, handleSubmit } = useForm<UserInformation>({
         defaultValues: {
@@ -18,7 +24,7 @@ export default function Profile() {
             suffix: "",
             civilStatus: "",
             birthdate: "",
-            citizenShip: "",
+            citizenship: "",
 
             region: "",
             province: "",
@@ -65,7 +71,8 @@ export default function Profile() {
     };
 
     const onsubmit: SubmitHandler<UserInformation> = (data) => {
-        console.log(data)
+        setProfile(data)
+        navigate('/profile/preview')
     }
 
     return (
@@ -127,7 +134,7 @@ export default function Profile() {
                                             </Field>
                                             <Field>
                                                 <FieldLabel>Citizenship</FieldLabel>
-                                                <Input type="text" {...register("citizenShip")} />
+                                                <Input type="text" {...register("citizenship")} />
                                             </Field>
                                         </div>
                                     )
