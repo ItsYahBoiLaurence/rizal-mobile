@@ -8,7 +8,7 @@ export default function AuthAppLayout() {
         <div>
             <PublicRoutes>
                 <AuthHeader />
-                <main>
+                <main className="h-[calc(100vh-65px)]">
                     <Outlet />
                 </main>
             </PublicRoutes>

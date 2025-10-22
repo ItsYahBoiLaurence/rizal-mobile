@@ -36,8 +36,8 @@ export default function AuthHeader() {
                     {navItems}
                 </ul>
             }
-            <Avatar className="absolute top-0 left-1/2 -translate-x-1/2 size-[80px] bg-[#012B54] p-2">
-                <AvatarImage src="https://github.com/shadcn.png" className="rounded-full" />
+            <Avatar className="absolute top-0 left-1/2 -translate-x-1/2 size-[80px] bg-[#012B54] p-0.5">
+                <AvatarImage src="/appLogo.svg" className="rounded-full" style={{ width: '100%' }} />
             </Avatar>
         </header>
     )

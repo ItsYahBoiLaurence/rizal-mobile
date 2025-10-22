@@ -52,7 +52,7 @@ export default function Home() {
                     className="bg-[#012B54] w-2/3"
                     onClick={() => {
                         setType(selectedCard)
-                        navigate(`/appointment/${selectedCard}`)
+                        navigate(`/appointment`)
                     }}
                     disabled={selectedCard === null}
                 >

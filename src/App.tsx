@@ -7,6 +7,7 @@ import AuthAppLayout from "./components/Layout/AppAuthLayout"
 import Register from "./pages/auth/register"
 import Appointment from "./pages/appointment"
 import { Confirm } from "./pages/appointment/confirm"
+import EmailVerification from "./pages/auth/email-verification"
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Route path="/auth" element={<AuthAppLayout />}>
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
+        <Route path="email-verification" element={<EmailVerification />} />
       </Route>
     </Routes>
   )
