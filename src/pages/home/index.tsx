@@ -1,11 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { useAppointment } from "@/store";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Home() {
 
-    const [selectedCard, setSelectedCard] = useState<string>("")
-
+    const { setType } = useAppointment()
+    const [selectedCard, setSelectedCard] = useState<string | null>(null)
+    const navigate = useNavigate()
     const cards = [
         {
             image: '/medical.svg',
@@ -45,9 +48,17 @@ export default function Home() {
                         </Card>
                     ))}
                 </div>
-                <Button className="bg-[#012B54] w-2/3">Proceed to Book Appointment</Button>
+                <Button
+                    className="bg-[#012B54] w-2/3"
+                    onClick={() => {
+                        setType(selectedCard)
+                        navigate(`/appointment/${selectedCard}`)
+                    }}
+                    disabled={selectedCard === null}
+                >
+                    Proceed to Book Appointment
+                </Button>
             </div>
         </div>
-
     )
 }

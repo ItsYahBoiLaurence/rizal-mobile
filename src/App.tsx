@@ -5,13 +5,17 @@ import Profile from "./pages/profile"
 import Login from "./pages/auth/login"
 import AuthAppLayout from "./components/Layout/AppAuthLayout"
 import Register from "./pages/auth/register"
+import Appointment from "./pages/appointment"
+import { Confirm } from "./pages/appointment/confirm"
 
 function App() {
   return (
     <Routes>
       <Route path="/" element={<AppLayout />} >
         <Route index element={<Home />} />
-        <Route path={'profile'} element={<Profile />} />
+        <Route path='profile' element={<Profile />} />
+        <Route path="appointment/:id" element={<Appointment />}></Route>
+        <Route path="confirmation" element={<Confirm />} />
       </Route>
       <Route path="/auth" element={<AuthAppLayout />}>
         <Route path="login" element={<Login />} />
