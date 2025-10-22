@@ -10,3 +10,36 @@ export interface UserRegister extends UserCreds {
 export interface UserVerification {
     code: string
 }
+
+export interface UserInformation {
+    firstName: string,
+    middleName: string,
+    lastName: string
+    suffix: string | null | undefined
+    civilStatus: string
+    birthdate: Date | string
+    citizenShip: string
+
+    region: string
+    province: string
+    cityMunicipality: string
+    baranggay: string
+    streetHouseNo: string
+
+    mobileNo: string
+    email: string
+
+    fatherFirstName: string
+    fatherMiddleName: string
+    fatherLastName: string
+    fatherSuffix: string
+    fatherBirthplace: string
+    fatherOccupation: string
+
+    motherFirstName: string
+    motherMiddleName: string
+    motherLastName: string
+    motherSuffix: string
+    motherBirthplace: string
+    motherOccupation: string
+}
