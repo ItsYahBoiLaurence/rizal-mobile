@@ -2,10 +2,9 @@ import { Button } from "@/components/ui/button"
 import { Calendar } from "@/components/ui/calendar"
 import { useAppointment } from "@/store"
 import { useState } from "react"
-import { Link, useNavigate, useParams } from "react-router-dom"
+import { Link, useNavigate } from "react-router-dom"
 
 export default function Appointment() {
-    const { id } = useParams<{ id: "string" }>()
     const navigate = useNavigate()
     const [date, setDate] = useState<Date | undefined>()
     const { setDate: setAppointmentDate, date: appointmentDate } = useAppointment()
