@@ -41,7 +41,7 @@ export default function Home() {
                             }}
                         >
                             <CardContent className=" p-2 flex flex-col items-center gap-y-2">
-                                <img src={card.image} className="size-[80px]" />
+                                <img src={card.image} className="size-[80px]" loading="lazy" />
                                 <p className="text-center text-sm font-semibold">{card.title}</p>
                                 <p className="text-center text-xs">{card.description}</p>
                             </CardContent>

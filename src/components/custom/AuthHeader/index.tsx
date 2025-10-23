@@ -37,7 +37,7 @@ export default function AuthHeader() {
                 </ul>
             }
             <Avatar className="absolute top-0 left-1/2 -translate-x-1/2 size-[80px] bg-[#012B54] p-0.5">
-                <AvatarImage src="/appLogo.svg" className="rounded-full" style={{ width: '100%' }} />
+                <AvatarImage src="/appLogo.svg" className="rounded-full" style={{ width: '100%' }} loading="lazy" />
             </Avatar>
         </header>
     )

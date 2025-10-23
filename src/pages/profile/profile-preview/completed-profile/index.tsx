@@ -6,7 +6,7 @@ export default function CompletedProfile() {
     return (
         <div className="container grid place-items-center">
             <div className="flex flex-col items-center gap-5">
-                <img src={'/success.svg'} className="w-[200px]" />
+                <img src={'/success.svg'} className="w-[200px]" loading="lazy" />
                 <div className="flex flex-col gap-3 text-center items-center">
                     <p className="text-lg font-semibold">
                         Profile Completed Successfully
