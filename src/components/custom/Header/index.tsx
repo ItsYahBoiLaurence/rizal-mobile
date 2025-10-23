@@ -5,6 +5,7 @@ import { useMediaQuery } from "@/hooks/useMediaQuery"
 import { Avatar, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { LogOut } from "lucide-react"
+import Applogo from '/appLogo.svg'
 
 export default function Header() {
 
@@ -40,7 +41,7 @@ export default function Header() {
                 </ul>
             }
             <Avatar className="absolute top-0  left-1/2 -translate-x-1/2 size-[80px] bg-[#012B54] p-0.5">
-                <AvatarImage src="/appLogo.svg" className="rounded-full" loading="lazy" />
+                <AvatarImage src={Applogo} className="rounded-full" loading="lazy" />
             </Avatar>
             {!isMobile && (
                 <Button variant={'secondary'}>
