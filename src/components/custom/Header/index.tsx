@@ -33,7 +33,7 @@ export default function Header() {
                 ?
                 <MobileNavigation nav={navigation} />
                 :
-                <ul className="flex flex-row gap-2">
+                <ul className="flex flex-row gap-5 text-white">
                     {navItems}
                 </ul>
             }

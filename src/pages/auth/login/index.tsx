@@ -25,7 +25,7 @@ export default function Login() {
     }
 
     return (
-        <div className="h-[calc(100vh-65px)] grid place-items-center">
+        <div className="h-[calc(100vh-65px)] max-w-[768px] mx-auto grid place-items-center">
             <div className="w-full p-5">
                 <div className="flex flex-col gap-5 mb-5">
                     <p className="text-center text-3xl font-semibold">Login</p>

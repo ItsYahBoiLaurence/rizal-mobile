@@ -28,7 +28,7 @@ export default function Home() {
     ]
 
     return (
-        <div className="grid place-items-center h-full">
+        <div className="grid place-items-center h-full max-w-[768px] mx-auto">
             <div className=" px-5 py-10 flex flex-col sm:gap-10 gap-5 items-center">
                 <p className="text-lg font-semibold">Select the type of disbursement you wish to apply for:</p>
                 <div className="flex flex-row w-full flex-wrap gap-5 justify-center">

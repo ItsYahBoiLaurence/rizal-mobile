@@ -144,4 +144,6 @@
   height: 100%;
   padding: 20px;
   overflow: auto;
+  max-width: 768px;
+  margin: 0 auto
 }

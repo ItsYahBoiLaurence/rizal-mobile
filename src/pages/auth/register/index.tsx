@@ -46,7 +46,7 @@ export default function Register() {
     }, [passwordData, confirmPasswordData])
 
     return (
-        <div className=" h-full grid place-items-center">
+        <div className=" h-full grid place-items-center max-w-[768px] mx-auto">
             <div className="w-full p-5">
                 <div className="flex flex-col gap-5 mb-5">
                     <p className="text-center text-3xl font-semibold">Register</p>

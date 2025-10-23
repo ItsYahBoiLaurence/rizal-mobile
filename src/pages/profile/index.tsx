@@ -76,7 +76,7 @@ export default function Profile() {
     }
 
     return (
-        <div className="h-full pt-5 pb-10 px-5 flex flex-col gap-3 overflow-auto">
+        <div className="container flex flex-col gap-3">
             <div className="flex flex-col gap-2">
                 <div>
                     <p className="text-lg font-semibold">Profile Completion</p>

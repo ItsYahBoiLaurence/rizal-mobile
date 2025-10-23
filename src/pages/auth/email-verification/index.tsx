@@ -22,7 +22,7 @@ export default function EmailVerification() {
     }
 
     return (
-        <div className="h-full grid place-items-center">
+        <div className="container grid place-items-center">
             <Card>
                 <CardHeader className="font-semibold">Email Verification</CardHeader>
                 <CardContent>
