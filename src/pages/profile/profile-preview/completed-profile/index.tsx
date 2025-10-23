@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
-
+import Success from '/success.svg'
 export default function CompletedProfile() {
     const navigate = useNavigate()
     return (
         <div className="container grid place-items-center">
             <div className="flex flex-col items-center gap-5">
-                <img src={'/success.svg'} className="w-[200px]" loading="lazy" />
+                <img src={Success} className="w-[200px]" loading="lazy" />
                 <div className="flex flex-col gap-3 text-center items-center">
                     <p className="text-lg font-semibold">
                         Profile Completed Successfully
