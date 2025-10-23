@@ -28,7 +28,7 @@ export function Confirm() {
     const navigate = useNavigate()
 
     return (
-        <div className="h-full pt-5 pb-10 px-5 flex flex-col gap-3 overflow-auto">
+        <div className="container flex flex-col gap-3">
             <p className="text-xl font-bold">Appointment Successfully Scheduled!</p>
             <div className="text-sm">
                 <p>Your appointment has been confirmed.</p>

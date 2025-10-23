@@ -9,6 +9,7 @@ import Appointment from "./pages/appointment"
 import { Confirm } from "./pages/appointment/confirm"
 import EmailVerification from "./pages/auth/email-verification"
 import ProfilePreview from "./pages/profile/profile-preview"
+import CompletedProfile from "./pages/profile/profile-preview/completed-profile"
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
         <Route path='profile/preview' element={<ProfilePreview />} />
         <Route path="appointment" element={<Appointment />}></Route>
         <Route path="confirmation" element={<Confirm />} />
+        <Route path="completed-profile" element={<CompletedProfile />} />
+
       </Route>
       <Route path="/auth" element={<AuthAppLayout />}>
         <Route path="login" element={<Login />} />

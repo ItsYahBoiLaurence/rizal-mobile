@@ -139,3 +139,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+.container {
+  height: 100%;
+  padding: 20px;
+  overflow: auto;
+}
