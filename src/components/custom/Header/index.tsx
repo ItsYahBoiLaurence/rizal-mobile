@@ -6,10 +6,13 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { LogOut } from "lucide-react"
 import Applogo from '/appLogo.svg'
+import { useAuthStore } from "@/store"
 
 export default function Header() {
 
     const isMobile = useMediaQuery("(max-width: 1024px)")
+
+    const logout = useAuthStore(state => state.logout)
 
     const navigation: NavItems[] = [
         {
@@ -44,12 +47,11 @@ export default function Header() {
                 <AvatarImage src={Applogo} className="rounded-full" loading="lazy" />
             </Avatar>
             {!isMobile && (
-                <Button variant={'secondary'}>
-                    <p>Logout</p>
+                <Button variant={'secondary'} onClick={logout} className="h-7">
                     <LogOut />
                 </Button>
             )
             }
-        </header>
+        </header >
     )
 }
