@@ -4,10 +4,10 @@ import { ProtectedRoutes } from "../custom/ProtectedRoutes";
 
 export default function AppLayout() {
     return (
-        <div>
+        <div className="relative">
             <ProtectedRoutes>
                 <Header />
-                <main className="h-[calc(100vh-65px)]">
+                <main className="h-[calc(100vh-65px)] relative z-0">
                     <Outlet />
                 </main>
                 {/* <Footer /> */}

@@ -3,10 +3,18 @@
 
 @custom-variant dark (&:is(.dark *));
 
+* {
+  scrollbar-width: none;
+  /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+}
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -140,10 +148,18 @@
   }
 }
 
+.hide-scrollbar {}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Opera */
+}
+
 .container {
   height: 100%;
   padding: 20px;
   overflow: auto;
   max-width: 768px;
-  margin: 0 auto
+  margin: 0 auto;
+  z-index: 10;
 }

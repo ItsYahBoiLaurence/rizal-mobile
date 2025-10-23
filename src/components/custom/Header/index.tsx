@@ -3,6 +3,8 @@ import { Link } from "react-router-dom"
 import { MobileNavigation } from "./MobileNavigation"
 import { useMediaQuery } from "@/hooks/useMediaQuery"
 import { Avatar, AvatarImage } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
+import { LogOut } from "lucide-react"
 
 export default function Header() {
 
@@ -28,7 +30,7 @@ export default function Header() {
     ))
 
     return (
-        <header className="p-5 bg-[#012B54] sticky top-0">
+        <header className="p-5 bg-[#012B54] sticky top-0 flex flex-row justify-between z-100">
             {isMobile
                 ?
                 <MobileNavigation nav={navigation} />
@@ -37,9 +39,16 @@ export default function Header() {
                     {navItems}
                 </ul>
             }
-            <Avatar className="absolute top-0 left-1/2 -translate-x-1/2 size-[80px] bg-[#012B54] p-0.5">
+            <Avatar className="absolute top-0  left-1/2 -translate-x-1/2 size-[80px] bg-[#012B54] p-0.5">
                 <AvatarImage src="/appLogo.svg" className="rounded-full" />
             </Avatar>
+            {!isMobile && (
+                <Button variant={'secondary'}>
+                    <p>Logout</p>
+                    <LogOut />
+                </Button>
+            )
+            }
         </header>
     )
 }
